@@ -17,9 +17,15 @@ namespace Gifter.Controllers
         }
 
         [HttpGet("search")]
-        public IActionResult Search(string q, bool sortDesc, DateTime since)
+        public IActionResult Search(string q, bool sortDesc)
         {
-            return Ok(_postRepository.Search(q, sortDesc, since));
+            return Ok(_postRepository.Search(q, sortDesc));
+        }
+
+        [HttpGet("hottest")]
+        public IActionResult Hottest(DateTime since)
+        {
+            return Ok(_postRepository.Hottest(since));
         }
 
         [HttpGet]
