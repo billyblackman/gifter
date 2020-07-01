@@ -15,6 +15,12 @@ namespace Gifter.Controllers
             _postRepository = new PostRepository(context);
         }
 
+        [HttpGet("search")]
+        public IActionResult Search(string q, bool sortDesc)
+        {
+            return Ok(_postRepository.Search(q, sortDesc));
+        }
+
         [HttpGet]
         public IActionResult Get()
         {

@@ -15,6 +15,16 @@ namespace Gifter.Repositories
             _context = context;
         }
 
+        public List<Post> Search(string criterion, bool sortDescending)
+        {
+            var query = _context.Post
+                                .Include(p => p.UserProfile)
+                                .Where(p => p.Title.Contains(criterion));
+
+            return sortDescending
+                ? query.OrderByDescending(p => p.DateCreated).ToList()
+                : query.OrderBy(p => p.DateCreated).ToList();
+        }
         public List<Post> GetAll()
         {
             return _context.Post
