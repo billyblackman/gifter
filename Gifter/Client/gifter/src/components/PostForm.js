@@ -5,7 +5,7 @@ import { PostContext } from "../providers/PostProvider"
 export const NewPostForm = () => {
 
 
-    const { addPost } = useContext(PostContext)
+    const { addPost, setPosts } = useContext(PostContext)
 
     const title = useRef()
     const imageUrl = useRef()
@@ -14,7 +14,7 @@ export const NewPostForm = () => {
     const newDate = new Date()
     const dateCreated = newDate.toJSON()
     
-    const userProfile = 1
+    const userProfileId = 1
 
     const addPostItem = () => {
 
@@ -23,7 +23,7 @@ export const NewPostForm = () => {
             imageUrl: imageUrl.current.value,
             caption: caption.current.value,
             dateCreated: dateCreated,
-            userProfile: userProfile
+            userProfileId: userProfileId
         }
         console.log(newPost)
         addPost(newPost)
