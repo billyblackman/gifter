@@ -152,3 +152,4 @@ C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\obj\Debug\netcoreapp3.
 C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\gifter\package-lock.json
 C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\gifter\package.json
 C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\gifter\public\manifest.json
+C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\package-lock.json
