@@ -46,7 +46,10 @@ namespace Gifter.Repositories
 
         public Post GetById(int id)
         {
-            return _context.Post.Include(p => p.UserProfile).FirstOrDefault(p => p.Id == id);
+            return _context.Post
+                .Include(p => p.UserProfile)
+                .Include(p => p.Comments)
+                .FirstOrDefault(p => p.Id == id);
         }
 
         public List<Post> GetByUserProfileId(int id)
