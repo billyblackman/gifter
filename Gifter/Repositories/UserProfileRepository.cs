@@ -22,9 +22,11 @@ namespace Gifter.Repositories
             return _context.UserProfile.ToList();
         }
 
-        public UserProfile GetById(int id)
+        public UserProfile GetByFirebaseUserId(string firebaseUserId)
         {
-            return _context.UserProfile.FirstOrDefault(u => u.Id == id);
+            return _context.UserProfile
+                .Include(up => up.UserType)
+                .FirstOrDefault(up => up.FirebaseUserId == firebaseUserId);
         }
 
         public void Add(UserProfile userProfile)
