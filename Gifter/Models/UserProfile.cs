@@ -18,6 +18,11 @@ namespace Gifter.Models
         [Required]
         public string Email { get; set; }
 
+        [Required]
+        public int UserTypeId { get; set; }
+
+        public int UserType { get; set; }
+
         public string ImageUrl { get; set; }
 
         [Required]

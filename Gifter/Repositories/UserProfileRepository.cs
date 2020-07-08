@@ -41,9 +41,9 @@ namespace Gifter.Repositories
             _context.SaveChanges();
         }
 
-        public void Delete(int id)
+        public void Delete(string firebaseUserId)
         {
-            var userProfile = GetById(id);
+            var userProfile = GetByFirebaseUserId(firebaseUserId);
             _context.UserProfile.Remove(userProfile);
             _context.SaveChanges();
         }

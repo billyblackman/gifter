@@ -54,9 +54,9 @@ namespace Gifter.Controllers
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(string firebaseUserId)
         {
-            _userProfileRepository.Delete(id);
+            _userProfileRepository.Delete(firebaseUserId);
             return NoContent();
         }
 

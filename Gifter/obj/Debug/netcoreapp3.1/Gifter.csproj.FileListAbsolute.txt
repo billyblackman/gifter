@@ -153,3 +153,10 @@ C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.
 C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\gifter\package.json
 C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\gifter\public\manifest.json
 C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Client\package-lock.json
+C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Billy Blackman\Documents\Workspace\Gifter\Gifter\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll

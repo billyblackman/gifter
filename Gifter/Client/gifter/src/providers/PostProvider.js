@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Spinner } from "reactstrap";
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -8,7 +8,19 @@ export const PostContext = React.createContext();
 export const PostProvider = (props) => {
   const apiUrl = "/api/post";
 
+  const getToken = () => firebase.auth().currentUser.getIdToken();
+
   const [posts, setPosts] = useState([]);
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isFirebaseReady, setIsFirebaseReady] = useState(false);
+
+  useEffect(() => {
+      firebase.auth().onAuthStateChanged((u) => {
+        setIsLoggedIn(!!u);
+        setIsFirebaseReady(true);
+      });
+    }, []);
 
   const getAllPosts = () =>
     getToken().then((token) =>
@@ -23,12 +35,12 @@ export const PostProvider = (props) => {
         
   const userPosts = (id) =>
     getToken().then((token) => 
-      fetch(`${apiUrl}/getbyuser/${id}`), {
+      fetch(`${apiUrl}/getbyuser/${id}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`
         }
-      }).then((res) => res.json()
+      }).then((res) => res.json())
         .then(setPosts));
 
   const getPost = (id) => 
