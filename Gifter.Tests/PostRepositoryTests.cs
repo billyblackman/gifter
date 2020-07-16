@@ -89,21 +89,24 @@ namespace Gifter.Tests
             {
                 Name = "Walter",
                 Email = "walter@gmail.com",
-                DateCreated = DateTime.Now - TimeSpan.FromDays(365)
+                DateCreated = DateTime.Now - TimeSpan.FromDays(365),
+                FirebaseUserId = "TEST_FIREBASE_UID_1"
             };
 
             var user2 = new UserProfile()
             {
                 Name = "Donny",
                 Email = "donny@gmail.com",
-                DateCreated = DateTime.Now - TimeSpan.FromDays(400)
+                DateCreated = DateTime.Now - TimeSpan.FromDays(400),
+                FirebaseUserId = "TEST_FIREBASE_UID_1"
             };
 
             var user3 = new UserProfile()
             {
                 Name = "The Dude",
                 Email = "thedude@gmail.com",
-                DateCreated = DateTime.Now - TimeSpan.FromDays(400)
+                DateCreated = DateTime.Now - TimeSpan.FromDays(400),
+                FirebaseUserId = "TEST_FIREBASE_UID_1"
             };
 
             _context.Add(user1);

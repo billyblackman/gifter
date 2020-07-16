@@ -5,10 +5,20 @@ import PostForm from "./PostForm";
 import PostDetails from "./PostDetails";
 import Post from "./Post";
 import UserPostList from "./UserPostList";
+import Login from "./Login";
+import Register from "./Register";
 
 const ApplicationViews = () => {
   return (
     <Switch>
+      <Route path="/login">
+        <Login />
+      </Route>
+
+      <Route path="/register">
+        <Register />
+      </Route>
+
       <Route path="/" exact>
         <PostList />
       </Route>
